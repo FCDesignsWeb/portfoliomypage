@@ -1,0 +1,342 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+
+background:linear-gradient(135deg,#ffffff,#f5f5f5,#ffe6f2,#f0f0f0);
+background-size:400% 400%;
+animation:fondoBrillo 15s ease infinite;
+
+color:#333;
+
+min-height:100vh;
+overflow-x:hidden;
+}
+
+/* BRILLOS SUAVES */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:radial-gradient(circle at 20% 30%, rgba(255,182,213,0.2), transparent 40%),
+           radial-gradient(circle at 80% 70%, rgba(200,200,200,0.2), transparent 40%);
+
+z-index:-1;
+}
+
+/* PROMO */
+.promo-bar{
+background:#d63384;
+color:white;
+text-align:center;
+padding:12px;
+font-weight:bold;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#ffffff;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#444;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d63384;
+}
+
+/* HERO (FONDO OSCURO PRO) */
+.hero{
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+padding:120px 20px;
+
+/* DEGRADÉ PROFESIONAL */
+background:radial-gradient(circle at center, #1a1a1a 0%, #0f0f0f 60%, #000 100%);
+color:white;
+}
+
+/* LOGO CIRCULAR INTEGRADO */
+.hero::before{
+content:"";
+position:absolute;
+
+width:380px;
+height:380px;
+
+background-image:
+linear-gradient(135deg, rgba(15,15,15,0.9), rgba(30,30,30,0.7)),
+url("logo2.png");
+
+background-size:cover, contain;
+background-repeat:no-repeat;
+background-position:center;
+
+border-radius:50%;
+
+opacity:0.95;
+filter:blur(0.5px);
+
+box-shadow:
+0 0 100px rgba(0,0,0,0.6),
+inset 0 0 60px rgba(0,0,0,0.5);
+
+z-index:0;
+}
+
+/* CONTENIDO HERO */
+.hero-content{
+position:relative;
+z-index:1;
+padding:20px;
+}
+
+.hero h2{
+color:#ffffff;
+font-size:38px;
+text-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.hero p{
+color:#dddddd;
+text-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* PROYECTOS */
+#proyectos{
+padding:70px 20px;
+text-align:center;
+}
+
+.proyectos-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.proyecto{
+background:white;
+width:260px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+overflow:hidden;
+transition:0.3s;
+}
+
+.proyecto:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.proyecto img{
+width:100%;
+}
+
+.proyecto h3{
+margin:15px;
+}
+
+.proyecto a{
+display:inline-block;
+margin-bottom:20px;
+background:#ff6fa9;
+color:white;
+padding:10px 18px;
+border-radius:20px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.proyecto a:hover{
+background:#d63384;
+}
+
+/* PRECIOS */
+#precios{
+padding:80px 20px;
+text-align:center;
+}
+
+.precio-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+max-width:350px;
+margin:auto;
+transition:0.3s;
+}
+
+.precio-card:hover{
+transform:scale(1.05);
+}
+
+.destacado{
+border:3px solid #d63384;
+}
+
+.precio-original{
+text-decoration:line-through;
+color:#999;
+}
+
+.precio{
+font-size:40px;
+color:#d63384;
+font-weight:bold;
+}
+
+.detalle{
+color:#777;
+margin-bottom:20px;
+}
+
+.precio-card ul{
+list-style:none;
+padding:0;
+}
+
+.precio-card li{
+margin:10px 0;
+}
+
+.btn-precio{
+display:inline-block;
+background:#d63384;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+margin-top:15px;
+transition:0.3s;
+}
+
+.btn-precio:hover{
+background:#a61e5c;
+}
+
+/* CONTACTO */
+#contacto{
+padding:80px;
+text-align:center;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+padding:15px 25px;
+border-radius:30px;
+text-decoration:none;
+font-size:18px;
+}
+
+/* BOTONES FLOTANTES */
+.whatsapp-float,
+.instagram-float{
+position:fixed;
+right:15px;
+
+width:55px;
+height:55px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+text-decoration:none;
+
+color:white;
+font-size:24px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
+z-index:999;
+}
+
+.whatsapp-float{
+bottom:20px;
+background:#25D366;
+}
+
+.instagram-float{
+bottom:85px;
+background:#E1306C;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#f2f2f2;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+.hero{
+padding:140px 20px;
+}
+
+.hero::before{
+width:260px;
+height:260px;
+}
+
+.proyectos-container{
+flex-direction:column;
+align-items:center;
+}
+
+.proyecto{
+width:90%;
+}
+
+.whatsapp-float{
+bottom:15px;
+right:10px;
+}
+
+.instagram-float{
+bottom:75px;
+right:10px;
+}
+
+}
+
+/* ANIMACION FONDO */
+@keyframes fondoBrillo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
